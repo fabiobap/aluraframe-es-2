@@ -7,12 +7,20 @@ class ListaNegociacoes {
     adiciona(negociacao) {
         this._negociacoes.push(negociacao);
     }
-    
+
     get negociacoes() {
         return [].concat(this._negociacoes);
     }
-    
-    esvazia(){
+
+    esvazia() {
         this._negociacoes = [];
+    }
+
+    ordena(criterio) {
+        this._negociacoes.sort(criterio);
+    }
+    
+    inverteOrdem() {
+        this._negociacoes.reverse();
     }
 }
